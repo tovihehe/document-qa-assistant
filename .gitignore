@@ -1,4 +1,4 @@
 env/
 extracted-pages/
 embeddings.index
-text_chunks
+text_chunks.txt
