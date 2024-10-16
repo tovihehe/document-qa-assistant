@@ -1,0 +1,4 @@
+env/
+extracted-pages/
+embeddings.index
+text_chunks
