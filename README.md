@@ -49,7 +49,7 @@
    ```bash
    pip install -r requirements.txt
    ```
-   > [**!NOTE**]
+   > [!NOTE]
    > Ensure all required libraries are installed. Use specific versions in `requirements.txt` to avoid compatibility issues.
 
 
@@ -71,7 +71,7 @@
 
 3. Upload one or more PDF documents using the file uploader.
    
-> [!ATTENTION]
+> [!CAUTION]
 > Processing very large PDF files may affect performance.
 
 > [!NOTE]
