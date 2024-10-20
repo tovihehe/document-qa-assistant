@@ -50,7 +50,7 @@
    pip install -r requirements.txt
    ```
 > [!NOTE]
-> Ensure all required libraries are installed. Use specific versions in `requirements.txt` to avoid compatibility issues.
+> Ensure all required libraries are installed. 
 
 
 4. Ensure the Ollama app is installed on your device, and do the following to pull the models:
@@ -69,7 +69,7 @@
 
 2. Open your web browser and go to `http://localhost:8501`.
 
-3. Upload one or more PDF documents using the file uploader.
+3. Upload one or more PDF documents using the file uploader. Remove them when the files are uploaded. 
    
 > [!CAUTION]
 > Processing very large PDF files may affect performance.
