@@ -53,9 +53,8 @@
 > Ensure all required libraries are installed. 
 
 
-4. Ensure the Ollama app is installed on your device, and do the following to pull the models:
+4. Ensure the Ollama app is installed on your device, and do the following commands to pull the models:
    ```bash
-   # Follow Ollama's installation instructions to start the server and do the following commands to pull the models 
    ollama pull llama3
    ollama pull mxbai-embed-large 
    ```
