@@ -54,6 +54,7 @@
 
 
 4. Ensure the Ollama app is installed on your device, and do the following commands to pull the models:
+   
    ```bash
    ollama pull llama3
    ollama pull mxbai-embed-large 
