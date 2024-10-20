@@ -49,7 +49,8 @@
    ```bash
    pip install -r requirements.txt
    ```
-   > **!NOTE**: Ensure all required libraries are installed. Use specific versions in `requirements.txt` to avoid compatibility issues.
+   > [**!NOTE**]
+   > Ensure all required libraries are installed. Use specific versions in `requirements.txt` to avoid compatibility issues.
 
 
 4. Ensure the Ollama app is installed on your device, and do the following to pull the models:
@@ -69,8 +70,12 @@
 2. Open your web browser and go to `http://localhost:8501`.
 
 3. Upload one or more PDF documents using the file uploader.
-> **!ATTENTION**: Processing very large PDF files may affect performance.
-> **!NOTE**: The application supports only PDF files. Ensure documents are in this format.
+   
+> [!ATTENTION]
+> Processing very large PDF files may affect performance.
+
+> [!NOTE]
+> The application supports only PDF files. Ensure documents are in this format.
 
 5. Wait for the documents to be processed and then enter your question in the text input field.
 
@@ -81,7 +86,8 @@
 - The application extracts text from uploaded PDF documents using PyPDF2.
 - Text is split into manageable chunks, which are then embedded into vector representations using an open-source embedding model of Ollama.
 - A FAISS index is created and updated with these embeddings, allowing for efficient retrieval of relevant text based on user queries.
- > **!NOTE**: The FAISS index is updated incrementally. Delete `embeddings.index` and `text_chunks.txt` for a fresh start.
+> [!NOTE]
+> The FAISS index is updated incrementally. Delete `embeddings.index` and `text_chunks.txt` for a fresh start.
 
 
 ## Contributing
