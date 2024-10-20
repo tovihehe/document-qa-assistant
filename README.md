@@ -2,6 +2,8 @@
 
 📚 **Document Q&A Assistant** is a Streamlit application that allows users to upload PDF documents and ask questions about their content. The application utilizes Ollama for language processing and FAISS for efficient similarity searching of text embeddings.
 
+![Captura de pantalla 2024-10-16 085400](https://github.com/user-attachments/assets/f31cb83e-6ab4-4a37-b8ce-86f01f9447b6)
+
 ## Table of Contents
 
 - [Features](#features)
