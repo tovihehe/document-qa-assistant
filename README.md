@@ -49,53 +49,40 @@
    ```bash
    pip install -r requirements.txt
    ```
+   > **!NOTE**: Ensure all required libraries are installed. Use specific versions in `requirements.txt` to avoid compatibility issues.
+
 
 4. Ensure the Ollama app is installed on your device, and do the following to pull the models:
    ```bash
-   # Follow Ollama's installation instructions to start the server.
+   # Follow Ollama's installation instructions to start the server and do the following commands to pull the models 
+   ollama pull llama3
+   ollama pull mxbai-embed-large 
    ```
 
 ## Usage
 
 1. Start the Streamlit app:
    ```bash
-   streamlit run app.py
+   streamlit run local-rag.py
    ```
 
 2. Open your web browser and go to `http://localhost:8501`.
 
 3. Upload one or more PDF documents using the file uploader.
+> **!ATTENTION**: Processing very large PDF files may affect performance.
+> **!NOTE**: The application supports only PDF files. Ensure documents are in this format.
 
-4. Wait for the documents to be processed and then enter your question in the text input field.
+5. Wait for the documents to be processed and then enter your question in the text input field.
 
-5. Click the 'Ask' button to get a response based on the document content.
+6. Click the 'Ask' button to get a response based on the document content.
 
 ## How It Works
 
 - The application extracts text from uploaded PDF documents using PyPDF2.
 - Text is split into manageable chunks, which are then embedded into vector representations using an open-source embedding model of Ollama.
 - A FAISS index is created and updated with these embeddings, allowing for efficient retrieval of relevant text based on user queries.
+ > **!NOTE**: The FAISS index is updated incrementally. Delete `embeddings.index` and `text_chunks.txt` for a fresh start.
 
-## Notes
-
-- **Dependencies**: Ensure all required libraries are installed. Use specific versions in `requirements.txt` to avoid compatibility issues.
-- **Environment Variables**: The application sets `KMP_DUPLICATE_LIB_OK = TRUE` to prevent OpenMP errors.
-- **Local Ollama API**: The Ollama API must be running locally for the application to function correctly.
-- **PDF Processing**: The application supports only PDF files. Ensure documents are in this format.
-- **FAISS Index**: The FAISS index is updated incrementally. Delete `embeddings.index` and `text_chunks.txt` for a fresh start.
-- **Text Chunk Size**: Maximum chunk size for text splitting is set to 500 characters.
-- **Conversation History**: Maintains a history of user interactions for context in responses.
-
-## Attention Points
-
-- **Performance**: Processing very large PDF files may affect performance.
-- **Security**: Be cautious with sensitive information in uploaded documents.
-- **User Input Validation**: Consider implementing input validation for better user experience.
-- **Error Handling**: Handle exceptions gracefully, especially for file operations and API calls.
-- **Documentation**: Keep the README and inline code documentation updated.
-- **Testing**: Regularly test the application with various PDFs for consistent behavior.
-- **Feedback Loop**: Encourage user feedback to guide future improvements.
-- **Future Improvements**: Potential features include support for more file formats and enhanced UI/UX.
 
 ## Contributing
 
