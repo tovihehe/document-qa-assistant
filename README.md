@@ -93,4 +93,4 @@
 
 ## Contributing
 
-Contributions are welcome! Please create a pull request for any improvements or bug fixes. Make sure to follow the project's coding style and include tests for any new functionality.
+Contributions are welcome! Please create a pull request for any improvements or bug fixes. 
