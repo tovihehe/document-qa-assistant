@@ -49,8 +49,8 @@
    ```bash
    pip install -r requirements.txt
    ```
-   > [!NOTE]
-   > Ensure all required libraries are installed. Use specific versions in `requirements.txt` to avoid compatibility issues.
+> [!NOTE]
+> Ensure all required libraries are installed. Use specific versions in `requirements.txt` to avoid compatibility issues.
 
 
 4. Ensure the Ollama app is installed on your device, and do the following to pull the models:
@@ -84,7 +84,7 @@
 ## How It Works
 
 - The application extracts text from uploaded PDF documents using PyPDF2.
-- Text is split into manageable chunks, which are then embedded into vector representations using an open-source embedding model of Ollama.
+- Text is split into manageable chunks, which are then embedded into vector representations using an open-source embedding model of Ollama (mxbai-embed-large).
 - A FAISS index is created and updated with these embeddings, allowing for efficient retrieval of relevant text based on user queries.
 > [!NOTE]
 > The FAISS index is updated incrementally. Delete `embeddings.index` and `text_chunks.txt` for a fresh start.
